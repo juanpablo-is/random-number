@@ -33,6 +33,7 @@ main {
 
 #table div:nth-child(1) {
     overflow-y: auto;
+    height: 100%;
 }
 
 .tableResult {
