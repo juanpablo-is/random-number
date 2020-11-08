@@ -125,23 +125,29 @@ function initialState() {
 function calculateTable() {
     let fields = $(".field-process");
     let fieldsResultados = $(".field-result");
+    let fieldsResultadosTable = $(".tableResult td");
     let binary = "";
 
-    for (let i = 5; i < fields.length; i++) {
-        if (i % 5 == 0) {
-            let x1 = $(fields[i - 5]).text();
-            let x2 = $(fields[i - 2]).text();
-            $(fields[i]).text(x1 === x2 ? 0 : 1)
-        } else {
-            let x1 = $(fields[i - 6]).text();
-            $(fields[i]).text(x1);
-        }
+    if ($(".clicked").length == 5) {
+        for (let i = 5; i < fields.length; i++) {
+            if (i % 5 == 0) {
+                let x1 = $(fields[i - 5]).text();
+                let x2 = $(fields[i - 2]).text();
+                $(fields[i]).text(x1 === x2 ? 0 : 1)
+            } else {
+                let x1 = $(fields[i - 6]).text();
+                $(fields[i]).text(x1);
+            }
 
-        binary += $(fields[i]).text();
+            binary += $(fields[i]).text();
 
-        if ((i + 1) % 5 == 0) {
-            $(fieldsResultados[(i + 1) / 5 - 2]).text(convertToDecimal(binary));
-            binary = "";
+            if ((i + 1) % 5 == 0) {
+                let binaryToDecimal = convertToDecimal(binary);
+                $(fieldsResultados[(i + 1) / 5 - 2]).text(binaryToDecimal);
+                $(fieldsResultadosTable[(i + 1) / 5 - 2]).text(binaryToDecimal);
+
+                binary = "";
+            }
         }
     }
 }

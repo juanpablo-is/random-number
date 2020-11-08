@@ -13,41 +13,50 @@ p {
     padding: 0;
 }
 
+td {
+    text-align: center;
+}
+
 .clicked {
     background-color: #2C88C3 !important;
+    color: white;
 }
 
 main {
     height: 100vh;
+    display: flex;
 }
 
 #table {
-    height: 80%;
+    width: 70%;
     overflow-y: scroll;
 }
 
-table {
-    height: 100%;
+.tableResult {
     margin: 0;
+    color: white;
 }
 
 #panel {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
+    padding: 10px 30px;
+    width: 30%;
+    justify-content: center;
 }
 
 #pnlDateInput {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20%;
 }
 
 #pnlIS {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .pnlDate {
@@ -58,11 +67,4 @@ table {
 
 .yearPanel {
     flex: 2;
-}
-
-@media (max-width: 750px) {
-    #panel {
-        flex-direction: column;
-        height: auto;
-    }
 }
