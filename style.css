@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.clicked {
+    background-color: #2C88C3 !important;
+}
+
+main {
+    height: 100vh;
+}
+
+#table {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+table {
+    height: 100%;
+    margin: 0;
+}
+
+#panel {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+#pnlDateInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+#pnlIS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pnlDate {
+    flex: 1;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.yearPanel {
+    flex: 2;
+}
+
+@media (max-width: 750px) {
+    #panel {
+        flex-direction: column;
+        height: auto;
+    }
+}
