@@ -40,9 +40,8 @@ function convertToDecimal(number) {
 // Function auto for change value input according date.
 (function () {
     var date = new Date();
-    date.setUTCDate(7);
 
-    $("#day").val(date.getDay() + 1);
+    $("#day").val(date.getDate());
     $("#month").val(date.getMonth() + 1);
     $("#year").val(date.getFullYear());
 
