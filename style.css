@@ -2,15 +2,14 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
 p {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 td {
@@ -28,8 +27,14 @@ main {
 }
 
 #table {
-    width: 70%;
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#table div:nth-child(1) {
+    overflow-y: auto;
+    height: 100%;
 }
 
 .tableResult {
@@ -37,10 +42,14 @@ main {
     color: white;
 }
 
+.year {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 #panel {
     display: flex;
     flex-direction: column;
-    padding: 10px 30px;
     width: 30%;
     justify-content: center;
 }
